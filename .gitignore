@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.env
+credentials/
+*.json
+.vscode/
+.DS_Store
+node_modules/
+dist/
+build/
+backend/test_parser.py
+readme.md

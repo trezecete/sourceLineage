@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+google-cloud-bigquery
+google-cloud-bigquery-datatransfer
+sqlglot
+pydantic
+python-dotenv
+cors
+python-multipart
