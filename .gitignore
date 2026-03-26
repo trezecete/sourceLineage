@@ -10,4 +10,4 @@ node_modules/
 dist/
 build/
 backend/test_parser.py
-readme.md
+
