@@ -1,21 +1,28 @@
-# 📦 Notas de Release - IPNET Lineage Explorer
+# 📝 Release Notes - IPNET BigQuery Lineage Explorer
 
-## [2.2.0] - 2026-03-26
+## [1.0.0] - 2026-03-26
 
-### ✨ Novidades
-- **Rebranding Completo**: Interface 100% alinhada com a identidade visual da IPNET Cloud (Roxo, Lima e fonte Exo).
-- **Busca Unificada**: Implementada lógica de busca que aceita `projeto.dataset.tabela` em um único campo.
-- **Relacionamento de Colunas**: Agora o sistema extrai e exibe nomes de colunas envolvidas em `JOINs` e `MERGEs` diretamente no grafo.
+### 🚀 Lançamento Inicial
+Esta é a primeira versão estável da ferramenta de engenharia reversa de linhagem de dados.
 
-### 🛠️ Melhorias
-- **Sintaxe Mermaid**: Corrigido bug de renderização que causava erro `Uncaught (in promise)` em tabelas com caracteres especiais.
-- **Contraste de Cores**: Ajustado tema do gráfico para garantir legibilidade máxima (Textos Escuros sobre Nodes Claros).
-- **Performance de Filtro**: Otimizada a busca bi-direcional no backend para grandes volumes de consultas agendadas.
+### ✨ Novas Funcionalidades
+- **Parser SQL Inteligente**: Suporte completo para extração de linhagem de comandos `CREATE`, `INSERT`, `MERGE` e `UPDATE` dentro do BigQuery.
+- **Visualização Mermaid**: Grafo dinâmico com auto-layout focado em fluxos de dados.
+- **Identidade Visual IPNET**: Interface customizada com as cores roxo e lima, tipografia Exo e ícones modernos.
+- **Relacionamento de Colunas**: Exibição automática das colunas de ligação extraídas de cláusulas `ON` e `USING`.
+- **Filtro de Investigação**: Capacidade de buscar por tabelas específicas e isolar seus fluxos de dependência.
+- **Segurança**: Processamento de credenciais via upload de arquivo JSON de Service Account.
 
-### 🚀 Deploy
-- Adicionado suporte a upload de arquivo JSON para autenticação simplificada.
-- Adicionado arquivo `.gitignore` para segurança de credenciais.
-- Configuração de ambiente virtual (`venv`) documentada.
+### 🛠️ Melhorias Técnicas
+- Implementação de algoritmo BFS para descoberta de linhagem bi-direcional (Upstream/Downstream).
+- Tratamento de erros de sintaxe Mermaid para garantir que o grafo sempre tente renderizar mesmo com nomes de tabelas complexos.
+- Backend modular seguindo princípios de separação de responsabilidades.
+
+### 📦 Dependências Principais
+- `fastapi` & `uvicorn` (Core API)
+- `sqlglot` (SQL Analysis)
+- `google-cloud-bigquery-datatransfer` (BQ Meta-data)
+- `mermaid.js` v10 (Graph Rendering)
 
 ---
-*Versão Estável para uso em Engenharia de Dados.*
+**IPNET Cloud Solutions** | *Inovação em Dados e Nuvem.*
