@@ -9,7 +9,7 @@ from typing import List, Optional, Dict, Any, Set
 from lineage_parser import LineageParser
 from bigquery_service import BigQueryDataTransferService
 
-app = FastAPI(title="IPNET BigQuery Lineage Explorer")
+app = FastAPI(title="BigQuery Data Lineage Explorer")
 
 app.add_middleware(
     CORSMiddleware,
